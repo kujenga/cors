@@ -89,7 +89,7 @@ func New(options Options) *Cors {
 		maxAge:           options.MaxAge,
 	}
 	if options.Debug {
-		c.log = log.New(os.Stdout, "[cors] ", log.LstdFlags)
+		c.log = log.New(os.Stderr, "[cors] ", log.LstdFlags)
 	}
 
 	// Normalize options
